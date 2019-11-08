@@ -1,0 +1,65 @@
+{
+  "data" : [
+    {
+      "title" : "CCTV-1 综合",
+      "quality" : "高清",
+      "url" : "http://223.110.245.147/ott.js.chinamobile.com/PLTV/3/224/3221226998/index.m3u8",
+      "img" : "http://1118cctv.com/upload/images/cctvlogo/cctv1.jpg"
+    },
+    {
+      "title" : "CCTV-2 财经",
+      "quality" : "高清",
+      "url" : "http://ivi.bupt.edu.cn/hls/cctv2.m3u8",
+      "img" : "http://1118cctv.com/upload/images/cctvlogo/cctv2.jpg"
+    },
+    {
+      "title" : "CCTV-3 综艺",
+      "quality" : "高清",
+      "url": "http://ivi.bupt.edu.cn/hls/cctv3.m3u8",
+      "img" : "http://1118cctv.com/upload/images/cctvlogo/cctv3.jpg"
+    },
+    {
+      "title" : "CCTV-4 中文",
+      "quality" : "高清",
+      "url" : "http://ivi.bupt.edu.cn/hls/cctv4.m3u8",
+      "img" : "http://1118cctv.com/upload/images/cctvlogo/cctv4.jpg"
+    },
+    {
+      "title" : "CCTV-5 体育",
+      "quality" : "高清",
+      "url" : "http://ivi.bupt.edu.cn/hls/cctv5phd.m3u8",
+      "img" : "http://1118cctv.com/upload/images/cctvlogo/cctv5.jpg"
+    },
+    {
+      "title" : "CCTV-6 电影",
+      "quality" : "高清",
+      "url" : "http://ivi.bupt.edu.cn/hls/cctv6.m3u8",
+      "img" : "http://1118cctv.com/upload/images/cctvlogo/cctv6.jpg"
+    },
+    {
+          "title" : "江苏卫视",
+          "quality" : "高清",
+          "url" : "http://ivi.bupt.edu.cn/hls/jshd.m3u8",
+          "img" : "http://ww3.sinaimg.cn/large/5de8a2e4gw1eke9eux9u4j20ba05naa3.jpg"
+     },
+    {
+           "title" : "浙江卫视",
+           "quality" : "高清",
+           "url" : "http://ivi.bupt.edu.cn/hls/zjhd.m3u8",
+           "img" : "http://n.sinaimg.cn/sinacn21/694/w394h300/20180522/8f89-hawmauc0528337.jpg"
+    },
+    {
+           "title" : "东方卫视",
+           "quality" : "高清",
+           "url" : "http://ivi.bupt.edu.cn/hls/dfhd.m3u8",
+           "img" : "http://gss0.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D450%2C600/sign=edb1a68b31fa828bd17695e7c82f6d02/cb8065380cd79123c652b6faaf345982b3b78089.jpg"
+    },
+    {
+           "title" : "湖南卫视",
+           "quality" : "高清",
+           "url" : "http://ivi.bupt.edu.cn/hls/hunanhd.m3u8",
+           "img" : ""
+        },
+  ],
+  "length": 9
+}
