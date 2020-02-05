@@ -27,25 +27,23 @@ import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.util.Util;
-import com.google.android.material.bottomappbar.BottomAppBar;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class TvAction extends AppCompatActivity {
     private PlayerView playerView;
     private SimpleExoPlayer player;
-    MediaSource mediaSource;
+    private MediaSource mediaSource;
 
 
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
         super.onCreate ( savedInstanceState );
-        setContentView ( R.layout.layout_action );
+        setContentView ( R.layout.activity_action );
         final TextView tx = ( TextView ) findViewById ( R.id.action_head );
         Button bt_fill = (Button )findViewById ( R.id.action_fill );
 
 
         final Intent intent = getIntent ( );
-        String getMessage = intent.getStringExtra ( MainActivity.EXTRA_MESSAGE );
+        String getMessage = intent.getStringExtra ( Home.EXTRA_MESSAGE );
         String[] msg = getMessage.split ( "@@@" );
         String net = checknet ( this );
 

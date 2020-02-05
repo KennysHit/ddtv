@@ -48,14 +48,14 @@ public class MovieListAdapter extends RecyclerView.Adapter< MovieListAdapter.Mov
      */
     public MovieViewHolder onCreateViewHolder ( ViewGroup viewGroup , int i ) {
         View container = LayoutInflater.from ( viewGroup.getContext () ).inflate (
-                R.layout.layout_view ,viewGroup,false );
+                R.layout.activity_view ,viewGroup,false );
         return new MovieViewHolder(container);
     }
     /**
      * 填充每一行内容
      */
     public void onBindViewHolder ( MovieViewHolder movieViewHolder , final int i ) {
-        movieViewHolder.bind ( this.context,data.get ( i ),i);
+        movieViewHolder.bind ( this.context, data.get ( i ), i);
         movieViewHolder.itemView.setOnClickListener ( new View.OnClickListener ( ) {
             @Override
             public void onClick ( View v ) {

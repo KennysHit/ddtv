@@ -3,11 +3,11 @@
 buildscript {
     repositories {
         google()
-        jcenter()
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
         
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.2'
+        classpath 'com.android.tools.build:gradle:3.5.3'
         
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -17,8 +17,11 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
-        
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        //Bmob仓库
+        maven { url "https://raw.github.com/bmob/bmob-android-sdk/master" }
+        //RxPermissions框架仓库
+        maven { url 'https://jitpack.io' }
     }
 }
 
