@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="196dp"
-    android:background="#FFC400"
+    android:background="#94FF9100"
     tools:context=".Home">
 
     <TextView
@@ -25,8 +25,18 @@
         android:layout_height="96dp"
         android:layout_centerHorizontal="true"
         android:layout_margin="30dp"
-        android:src="@drawable/headimg"
+        android:src="@drawable/head"
         app:civ_border_color="@android:color/white"
         app:civ_border_width="0.5dp" />
+
+    <Button
+        android:id="@+id/nav_logout"
+        android:layout_width="72dp"
+        android:layout_height="24dp"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_style"
+        android:text="退出登录"
+        android:textColor="@android:color/white" />
 
 </FrameLayout>
