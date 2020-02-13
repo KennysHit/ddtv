@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,7 +20,7 @@ public class TvList extends Fragment {
 
     private View view;
     private RecyclerView tvList;
-    private MovieListAdapter movieAdapter;
+    private TvListAdapter TvAdapter;
     private List<jsonObject> data;
     private Button toUV;
     public static String EXTRA_MESSAGE = null;
@@ -34,10 +33,10 @@ public class TvList extends Fragment {
         initData ();
 
         System.out.println ( data.size () );
-        movieAdapter = new MovieListAdapter(getActivity (),this.data);
+        TvAdapter = new TvListAdapter (getActivity (),this.data);
         tvList.setLayoutManager ( new LinearLayoutManager ( getActivity () ) );//设置列表样式
-        tvList.setAdapter ( movieAdapter );
-        movieAdapter.setOnItemClickListener ( new MovieListAdapter.OnItemClickListener ( ) {
+        tvList.setAdapter ( TvAdapter );
+        TvAdapter.setOnItemClickListener ( new TvListAdapter.OnItemClickListener ( ) {
             @Override
             public void onClick ( int position ) {
                 EXTRA_MESSAGE = data.get ( position ).getTitle ()+"@@@"+data.get ( position ).getUrl ();
@@ -45,7 +44,7 @@ public class TvList extends Fragment {
                 getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.home, tvaction ).commit ();
             }
         } );
-        movieAdapter.setOnItemLongClickListener ( new MovieListAdapter.OnItemLongClickListener ( ) {
+        TvAdapter.setOnItemLongClickListener ( new TvListAdapter.OnItemLongClickListener ( ) {
             @Override
             public void onLongClick ( int position ) {
                 Log.d("info",data.get ( position ).getTitle ()+"的Url："+data.get ( position ).getUrl ());

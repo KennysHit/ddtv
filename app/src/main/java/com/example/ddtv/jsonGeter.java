@@ -38,7 +38,7 @@ public class jsonGeter {
         try {
             JSONObject obj = new JSONObject(json);
             JSONArray data = obj.getJSONArray("data");
-            for (int i = 0; i < data.length(); i++) {
+            for (int i = 0; i < obj.getInt ( "length" ); i++) {
                 jsonObject jo = new jsonObject ();
                 JSONObject item = data.getJSONObject(i);
                 jo.setTitle(item.getString("title"));

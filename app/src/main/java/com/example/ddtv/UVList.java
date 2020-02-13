@@ -13,23 +13,26 @@ import androidx.fragment.app.Fragment;
 public class UVList extends Fragment {
     private View view;
     private Button toTv;
+
     @Nullable
     @Override
     public View onCreateView ( @NonNull LayoutInflater inflater , @Nullable ViewGroup container , @Nullable Bundle savedInstanceState ) {
-        view = inflater.inflate ( R.layout.fragment_svlist, container, false );
-        initView ();
+        view = inflater.inflate ( R.layout.fragment_uvlist , container , false );
+        initView ( );
 
         toTv.setOnClickListener ( new View.OnClickListener ( ) {
             @Override
             public void onClick ( View view ) {
-                Fragment tvlist = new TvList ();
-                getActivity ().getSupportFragmentManager ().beginTransaction ().replace ( R.id.home, tvlist ).commit ();
+                Fragment tvlist = new TvList ( );
+                getActivity ( ).getSupportFragmentManager ( ).beginTransaction ( ).replace ( R.id.home , tvlist ).commit ( );
             }
         } );
+
         return view;
     }
 
-    public void initView(){
-        toTv = (Button)view.findViewById ( R.id.to_tvlist );
+    public void initView () {
+        toTv = ( Button ) view.findViewById ( R.id.to_tvlist );
     }
+
 }

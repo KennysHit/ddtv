@@ -17,11 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".TvList"></activity>
+        <activity android:name=".Upload"></activity>
+        <activity android:name=".TvList" />
 
         <provider
             android:name="cn.bmob.v3.util.BmobContentProvider"
-            android:authorities="com.example.ddtv.BmobContentProvider"></provider>
+            android:authorities="com.example.ddtv.BmobContentProvider" />
 
         <activity android:name=".TvAction" />
         <activity android:name=".Home" />
