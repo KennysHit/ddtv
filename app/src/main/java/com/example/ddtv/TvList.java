@@ -61,7 +61,7 @@ public class TvList extends Fragment {
         return view;
     }
     private void initView () {
-        tvList = view.findViewById ( R.id.tvlist );
+        tvList = view.findViewById ( R.id.tv_list );
         toUV = view.findViewById ( R.id.to_uvlist );
     }
 

@@ -14,19 +14,19 @@ import java.util.List;
 
 
 
-public class TvListAdapter extends RecyclerView.Adapter< TvListAdapter.TvViewHolder >{
+public class UvListAdapter extends RecyclerView.Adapter< UvListAdapter.UvViewHolder >{
     private List<jsonObject> data;
     private Context context;
 
-    public TvListAdapter ( Context context , List<jsonObject> data) {
+    public UvListAdapter ( Context context , List<jsonObject> data) {
         if(data==null)
             this.data = new ArrayList<> ( );
         this.data = data;
         this.context = context;
     }
-        /**
-         * 定义点击事件接口
-         */
+    /**
+     * 定义点击事件接口
+     */
     public interface OnItemClickListener{
         void onClick ( int position );
     }
@@ -47,17 +47,17 @@ public class TvListAdapter extends RecyclerView.Adapter< TvListAdapter.TvViewHol
     /**
      * 找到电影行对应的xml
      */
-    public TvViewHolder onCreateViewHolder ( ViewGroup viewGroup , int i ) {
+    public UvViewHolder onCreateViewHolder ( ViewGroup viewGroup , int i ) {
         View container = LayoutInflater.from ( viewGroup.getContext () ).inflate (
-                R.layout.tvlisit_card ,viewGroup,false );
-        return new TvViewHolder (container);
+                R.layout.uvlist_card ,viewGroup,false );
+        return new UvViewHolder (container);
     }
     /**
      * 填充每一行内容
      */
-    public void onBindViewHolder ( TvViewHolder tvViewHolder , final int i ) {
-        tvViewHolder.bind ( data.get ( i ), i);
-        tvViewHolder.itemView.setOnClickListener ( new View.OnClickListener ( ) {
+    public void onBindViewHolder ( UvViewHolder uvViewHolder , final int i ) {
+        uvViewHolder.bind ( );
+        uvViewHolder.itemView.setOnClickListener ( new View.OnClickListener ( ) {
             @Override
             public void onClick ( View v ) {
                 if ( listener != null ){
@@ -65,7 +65,7 @@ public class TvListAdapter extends RecyclerView.Adapter< TvListAdapter.TvViewHol
                 }
             }
         } );
-        tvViewHolder.itemView.setOnLongClickListener ( new View.OnLongClickListener ( ) {
+        uvViewHolder.itemView.setOnLongClickListener ( new View.OnLongClickListener ( ) {
             @Override
             public boolean onLongClick ( View v ) {
                 longListener.onLongClick ( i );
@@ -78,34 +78,19 @@ public class TvListAdapter extends RecyclerView.Adapter< TvListAdapter.TvViewHol
         return data.size ();
     }
 
-    public class TvViewHolder extends RecyclerView.ViewHolder{
-        private TextView moveName;
-        private TextView exp;
+    public class UvViewHolder extends RecyclerView.ViewHolder{
+
+        private TextView title;
         private ImageView imageView;
 
-        private int[] img={
-                R.drawable.c1,
-                R.drawable.c2,
-                R.drawable.c3,
-                R.drawable.c4,
-                R.drawable.c5,
-                R.drawable.c6,
-                R.drawable.js,
-                R.drawable.zj,
-                R.drawable.df,
-                R.drawable.hn,
-        };
-        public TvViewHolder ( View container) {
+        public UvViewHolder ( View container) {
             super(container);
-            moveName = container.findViewById(R.id.tv_card_title );
-            imageView = container.findViewById(R.id.tv_card_img );
-            exp = container.findViewById ( R.id.tv_card_exp );
+            title = (TextView) container.findViewById ( R.id.uv_card_title );
+            imageView = (ImageView) container.findViewById ( R.id.uv_card_image );
         }
 
-        public void bind(jsonObject jo ,int i) {
-            this.moveName.setText(jo.getTitle ());
-            this.exp.setText ( jo.getQuality () );
-            imageView.setImageResource ( img[i] );
+        public void bind( ) {
+
         }
     }
 }

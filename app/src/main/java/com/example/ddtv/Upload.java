@@ -2,11 +2,13 @@ package com.example.ddtv;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.media.MediaMetadataRetriever;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.datatype.BmobFile;
@@ -27,6 +31,7 @@ public class Upload extends AppCompatActivity {
     private ImageView img;
     private Button up;
 
+    @SuppressLint("WrongThread")
     @Override
     protected void onCreate ( Bundle savedInstanceState ) {
         super.onCreate ( savedInstanceState );
@@ -39,7 +44,6 @@ public class Upload extends AppCompatActivity {
         MediaMetadataRetriever mmr=new MediaMetadataRetriever();//实例化MediaMetadataRetriever对象
         mmr.setDataSource(file.getAbsolutePath());
         Bitmap bitmap=mmr.getFrameAtTime();//获得视频第一帧的Bitmap对象
-
         img.setImageBitmap ( bitmap );
         System.out.println ( FileUtils.getFilePathByUri ( this, uri ) );
 
