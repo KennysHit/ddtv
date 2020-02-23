@@ -1,9 +1,4 @@
 package com.example.ddtv;
-
-import android.graphics.Bitmap;
-
-import java.io.File;
-
 import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.datatype.BmobFile;
 
@@ -12,6 +7,7 @@ public class Video extends BmobObject {
     private String title;
     private BmobFile file;
     private String author;
+    private BmobFile img;
 
     public void setTitle ( String title ) {
         this.title = title;
@@ -35,5 +31,13 @@ public class Video extends BmobObject {
 
     public String getAuthor () {
         return author;
+    }
+
+    public BmobFile getImg () {
+        return img;
+    }
+
+    public void setImg ( BmobFile img ) {
+        this.img = img;
     }
 }

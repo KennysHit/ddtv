@@ -3,7 +3,6 @@ package com.example.ddtv;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +37,7 @@ public class TvAction extends Fragment {
     @Nullable
     @Override
     public View onCreateView ( @NonNull LayoutInflater inflater , @Nullable ViewGroup container , @Nullable Bundle savedInstanceState ) {
-        view = inflater.inflate ( R.layout.fragment_action, container, false );
+        view = inflater.inflate ( R.layout.fragment_tvaction , container, false );
 
         String getMessage = TvList.EXTRA_MESSAGE;
         String[] msg = getMessage.split ( "@@@" );
